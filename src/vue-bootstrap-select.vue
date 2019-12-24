@@ -92,7 +92,11 @@ export default {
     valueProp: {
       type: String,
       default: "value"
-    }
+    },
+    limit: {
+      type: Number,
+      default: 10
+    },
   },
   data() {
     return {
@@ -122,7 +126,7 @@ export default {
               item.toLowerCase().indexOf(this.searchValue.toLowerCase()) !== -1
             );
           }
-        }).slice(0, 10);
+        }).slice(0, this.limit);
       }
       return this.options;
     },
