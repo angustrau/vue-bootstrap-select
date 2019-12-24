@@ -8,7 +8,7 @@
     class="v-select"
     :class="{'disabled': disabled}">
     <button @click="toggle" type="button" class="v-select-toggle">
-      <div>{{ title }}</div>
+      <div class="v-select-title">{{ title }}</div>
       <div class="arrow-down"></div>
     </button>
     <div v-show="show" class="v-dropdown-container">
@@ -322,6 +322,11 @@ ul {
     background-color: #e2e6ea;
     border-color: #dae0e5;
   }
+}
+
+.v-select-title {
+  width: 100%;
+  overflow: hidden;
 }
 
 .arrow-down {
