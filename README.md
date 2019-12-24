@@ -1,9 +1,9 @@
 
-[![AUR version](https://img.shields.io/npm/v/@alfsnd/vue-bootstrap-select.svg)](https://github.com/Sandalf/vue-bootstrap-select)
-[![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/react.svg)](https://github.com/Sandalf/vue-bootstrap-select)
+[![AUR version](https://img.shields.io/npm/v/@angustrau/vue-bootstrap-select.svg)](https://github.com/angustrau/vue-bootstrap-select)
+[![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/react.svg)](https://github.com/angustrau/vue-bootstrap-select)
 
-# @alfsnd/vue-bootstrap-select
-A vue version of [bootstrap select](https://github.com/snapappointments/bootstrap-select/)
+# @angustrau/vue-bootstrap-select
+A vue version of [bootstrap select](https://github.com/snapappointments/bootstrap-select/). Forked from [Sandalf/vue-bootstrap-select](https://github.com/Sandalf/vue-bootstrap-select).
 
 # Demo
 
@@ -12,13 +12,13 @@ A vue version of [bootstrap select](https://github.com/snapappointments/bootstra
 # Install
 
 ```shell
-npm install @alfsnd/vue-bootstrap-select --save
+npm install @angustrau/vue-bootstrap-select --save
 ```
 
 # Usage
 
 ```js
-import VSelect from '@alfsnd/vue-bootstrap-select'
+import VSelect from '@angustrau/vue-bootstrap-select'
 
 export default {
   name: 'app',
