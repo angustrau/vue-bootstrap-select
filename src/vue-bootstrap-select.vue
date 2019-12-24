@@ -327,6 +327,7 @@ ul {
 .v-select-title {
   width: 100%;
   overflow: hidden;
+  text-align: left;
 }
 
 .arrow-down {
