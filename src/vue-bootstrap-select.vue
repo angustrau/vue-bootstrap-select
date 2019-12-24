@@ -122,7 +122,7 @@ export default {
               item.toLowerCase().indexOf(this.searchValue.toLowerCase()) !== -1
             );
           }
-        });
+        }).slice(0, 10);
       }
       return this.options;
     },
