@@ -95,7 +95,7 @@ export default {
     },
     limit: {
       type: Number,
-      default: 10
+      default: null
     }
   },
   data() {
@@ -113,8 +113,9 @@ export default {
         : this.labelTitle;
     },
     filteredOptions() {
+      let options;
       if (this.searchable && this.searchValue.length > 0) {
-        return this.options
+        options = this.options
           .filter(item => {
             if (typeof item === "object") {
               return (
@@ -130,8 +131,14 @@ export default {
             }
           })
           .slice(0, this.limit);
+      } else {
+        options = this.options;
       }
-      return this.options.slice(0, this.limit);
+
+      if (this.limit !== null) {
+        options = options.slice(0, this.limit);
+      }
+      return options;
     },
     reversedOptions() {
       return [...this.filteredOptions].reverse();
