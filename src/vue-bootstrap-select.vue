@@ -96,7 +96,7 @@ export default {
     limit: {
       type: Number,
       default: 10
-    },
+    }
   },
   data() {
     return {
@@ -114,21 +114,24 @@ export default {
     },
     filteredOptions() {
       if (this.searchable && this.searchValue.length > 0) {
-        return this.options.filter(item => {
-          if (typeof item === "object") {
-            return (
-              item[this.textProp]
-                .toLowerCase()
-                .indexOf(this.searchValue.toLowerCase()) !== -1
-            );
-          } else {
-            return (
-              item.toLowerCase().indexOf(this.searchValue.toLowerCase()) !== -1
-            );
-          }
-        }).slice(0, this.limit);
+        return this.options
+          .filter(item => {
+            if (typeof item === "object") {
+              return (
+                item[this.textProp]
+                  .toLowerCase()
+                  .indexOf(this.searchValue.toLowerCase()) !== -1
+              );
+            } else {
+              return (
+                item.toLowerCase().indexOf(this.searchValue.toLowerCase()) !==
+                -1
+              );
+            }
+          })
+          .slice(0, this.limit);
       }
-      return this.options;
+      return this.options.slice(0, this.limit);
     },
     reversedOptions() {
       return [...this.filteredOptions].reverse();
